@@ -41,10 +41,10 @@ pyautogui.FAILSAFE = True
 
 def main():
     # add functions here
-    order(100) # orders salads X times
+    order(3000) # orders salads X times
 
 if __name__ == '__main__':
     pyautogui.alert('Ensure Brink is at the main menu where the salad button is visible!')
     start_time = time.time()
     main()
-    print("--- %s seconds to execute 200 orders in main --- " % (time.time() - start_time))
+    print("--- %s seconds to execute 3000 orders in main --- " % (time.time() - start_time))
