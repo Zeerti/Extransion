@@ -23,12 +23,12 @@ pyautogui.FAILSAFE = True
 
 def main():
     # add functions here
-    bump() # bumps orders
+    bump(3500) # bumps orders
 
 if __name__ == '__main__':
     pyautogui.alert('Ensure Kitchen is running and in focus()!')
     start_time = time.time() #getting what the current time is, and saving variable
-    main()
+    kitchenMain()
     print("--- %s seconds to execute 3000 orders in main --- " % (time.time() - start_time)) 
     #current time -prev time
     # to show what the total time was when the program finishes
