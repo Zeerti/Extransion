@@ -15,9 +15,9 @@ pyautogui.FAILSAFE = True
 #     print('\n')
 
 
-######################################
-# Coords Based on 2560 x 1440 monitor#
-######################################
+#######################################
+# Coords Based on 2560 x 1440 monitor #
+#######################################
 
 # Only needs to be done once a day.
 ## Login (x4)
