@@ -1,8 +1,8 @@
 import pyautogui
 import time
-from orderSalads import order
+from kitchenBump import bump
 # Adds a pause between all actions
-pyautogui.PAUSE = .03
+pyautogui.PAUSE = .01
 # Moving mouse to upper-left will abort program when true
 pyautogui.FAILSAFE = True
 
