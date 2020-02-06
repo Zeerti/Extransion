@@ -1,6 +1,8 @@
 import pyautogui
-# Adds a .5s pause to all actions
-pyautogui.PAUSE = .25
+import time
+from orderSalads import order
+# Adds a pause between all actions
+pyautogui.PAUSE = .03
 # Moving mouse to upper-left will abort program when true
 pyautogui.FAILSAFE = True
 
@@ -15,9 +17,9 @@ pyautogui.FAILSAFE = True
 #     print('\n')
 
 
-######################################
-# Coords Based on 2560 x 1440 monitor#
-######################################
+#######################################
+# Coords Based on 2560 x 1440 monitor #
+#######################################
 
 # Only needs to be done once a day.
 ## Login (x4)
@@ -34,18 +36,15 @@ pyautogui.FAILSAFE = True
 ## 1187 181(x4) -- Login
 ### click anywhere again once (Due to Busi-date not matching)
 
-# Repeat ad nauseam 
-# 1000 400 -- Salad button
-# 800 275 -- Baja 
-# Press down the row, increase Y by 113 each iteration (x6)
-# 2400 1300 -- PAY / CLOSE ORDER
-# 1600 400 -- Exact Cash Button
-# Need to add a delay due to "contacting punch"
-# Click anywhere again once (Change Due message)
-# AND REPEAT AND REPEAT AND REPEAT AND REPEAT
 
-pyautogui.click(x=1000, y=400, button='left')
 
-for i in range(6)
-    pyautogui.move(0,50)
-    pyautogui.click()
+
+def main():
+    # add functions here
+    order(3000) # orders salads X times
+
+if __name__ == '__main__':
+    pyautogui.alert('Ensure Brink is at the main menu where the salad button is visible!')
+    start_time = time.time()
+    main()
+    print("--- %s seconds to execute 3000 orders in main --- " % (time.time() - start_time))
