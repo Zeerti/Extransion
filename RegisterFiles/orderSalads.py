@@ -29,3 +29,7 @@ def order(orderIterations):
             pyautogui.click(x=1600, y=400) # touch anywhere to "ok" the Change Due
     except TypeError:
         pyautogui.alert('Invalid operation!')
+
+
+# order 2 hot dogs
+# Tender and close
