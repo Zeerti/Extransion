@@ -2,7 +2,7 @@ import pyautogui
 import time
 from kitchenBump import bump
 # Adds a pause between all actions
-pyautogui.PAUSE = .01
+pyautogui.PAUSE = .1
 # Moving mouse to upper-left will abort program when true
 pyautogui.FAILSAFE = True
 
@@ -18,12 +18,13 @@ pyautogui.FAILSAFE = True
 
 # Click anywhere on the monitor
 # press the "b" key
-# wait 1 second
+# wait 0.1 second
 # press the "b" key
+# this will repeat until stopped
 
 def kitchenMain():
     # add functions here
-    bump(3500) # bumps orders
+    bump() # bumps orders
 
 if __name__ == '__main__':
     pyautogui.alert('Ensure Kitchen is running and in focus()!')
