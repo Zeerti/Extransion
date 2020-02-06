@@ -25,7 +25,7 @@ def order(orderIterations):
                 pyautogui.click()
             pyautogui.click(x=2400, y=1300) # Pay / close order
             pyautogui.click(x=1600, y=400) # Exact Cash button
-            sleep(1) # 1 second sleep while punchh does its thing
+            # sleep(1) # 1 second sleep while punchh does its thing
             pyautogui.click(x=1600, y=400)
     except TypeError:
-        print('Oops! That was an invalid number for the "orderSalads" function. Please try again.')    
+        print('Oops! That was an invalid number for the "orderSalads" function. Please try again.')

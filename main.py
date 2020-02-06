@@ -2,7 +2,7 @@ import pyautogui
 import time
 from orderSalads import order
 # Adds a pause between all actions
-pyautogui.PAUSE = .03
+pyautogui.PAUSE = 1
 # Moving mouse to upper-left will abort program when true
 pyautogui.FAILSAFE = True
 
