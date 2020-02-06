@@ -21,7 +21,7 @@ pyautogui.FAILSAFE = True
 # wait 1 second
 # press the "b" key
 
-def main():
+def kitchenMain():
     # add functions here
     bump(3500) # bumps orders
 

@@ -15,7 +15,7 @@ from time import sleep
 # order each salad in first column,
 # close order
 # Function assumes you are at the main menu where the Green salad button is displayed
-def bump(orderIterations):
+def bump(bumpIterations):
     while True:
         try:
             pyautogui.click(x=500, y=500) # Click anywhere to ensure Kitchen.exe is in Focus()
