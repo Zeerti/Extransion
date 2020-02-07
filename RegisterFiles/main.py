@@ -1,5 +1,6 @@
 import pyautogui
 import time
+import eel
 from orderSalads import order
 import orderHotDog
 # Adds a pause between all actions
@@ -45,7 +46,9 @@ pyautogui.FAILSAFE = True
 def main():
     # add functions here
     # order(3000) # orders salads X times
-    orderHotDog.orderHotDogs(300)
+    # orderHotDog.orderHotDogs(300)
+    eel.init('static_web_folder')
+    eel.start('index.html', mode='edge')
 
 if __name__ == '__main__':
     pyautogui.alert('Ensure Brink is at the main menu where the salad button is visible!')
@@ -55,4 +58,14 @@ if __name__ == '__main__':
     #current time -prev time
    # to show what the total time was when the program finishes
 
+num = guiInput.seperated()
 
+for i in num:
+    if i = 1:
+        clickNumber1()
+    if i = 2:
+        clickNumber2()
+    if i = 3:
+        clickNumber3()
+    if i = 4:
+        clickNumber4()
