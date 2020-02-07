@@ -11,4 +11,3 @@
 # 417 384 -- 0
 
 import pyautogui
-from sleep import time
