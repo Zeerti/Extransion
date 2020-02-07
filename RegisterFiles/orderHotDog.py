@@ -17,7 +17,7 @@ def order(numberOfOrders):
     while(_clicks < numberOfOrders):
         # Uncomment this section to make random ordering. comment out other instance.
         # randoNumber = randrange(3) + 1
-        
+
         randoNumber = 1
         if(randoNumber == 1):
             pyautogui.click(x=1937, y=757) # order hotdog
@@ -39,3 +39,6 @@ def orderHotDogs(iterations):
             pyautogui.press('1', presses=2)
     except TypeError:
         print('General Error')
+
+
+

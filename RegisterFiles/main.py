@@ -27,20 +27,10 @@ pyautogui.FAILSAFE = True
 #smoketest-r01 -- R1
 
 
-# Only needs to be done once a day.
-## Login (x4)
-## 1187, 181
-## Set drawer if needed
-## 1610 56 -- manager
-## 1592 350 -- Manage Drawers
-## 800 100 -- CD1 - TO-GO
-## 300 1400 -- Assign Drawer
-## 1100 700 -- Name of person to assign to
-## 1200 900 -- Set bank amount
-## 2300 1400 -- Close drawer management
-## 2400 50 -- Logout
-## 1187 181(x4) -- Login
-### click anywhere again once (Due to Busi-date not matching)
+# need the following paramaters
+# login pin
+# register
+# iterations
 
 def main():
     # add functions here
