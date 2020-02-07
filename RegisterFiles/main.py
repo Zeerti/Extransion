@@ -1,8 +1,9 @@
 import pyautogui
 import time
 from orderSalads import order
+import orderHotDog
 # Adds a pause between all actions
-pyautogui.PAUSE = .03
+pyautogui.PAUSE = .1
 # Moving mouse to upper-left will abort program when true
 pyautogui.FAILSAFE = True
 
@@ -19,6 +20,12 @@ pyautogui.FAILSAFE = True
 #######################################
 # Coords Based on 2560 x 1440 monitor #
 #######################################
+
+#15 - 45 seconds
+#5 second to order
+#smoketest-k91 TO K93
+#smoketest-r01 -- R1
+
 
 # Only needs to be done once a day.
 ## Login (x4)
@@ -37,7 +44,8 @@ pyautogui.FAILSAFE = True
 
 def main():
     # add functions here
-    order(3000) # orders salads X times
+    # order(3000) # orders salads X times
+    orderHotDog.orderHotDogs(300)
 
 if __name__ == '__main__':
     pyautogui.alert('Ensure Brink is at the main menu where the salad button is visible!')
@@ -45,6 +53,6 @@ if __name__ == '__main__':
     main()
     print("--- %s seconds to execute 3000 orders in main --- " % (time.time() - start_time)) 
     #current time -prev time
-    # to show what the total time was when the program finishes
+   # to show what the total time was when the program finishes
 
 
