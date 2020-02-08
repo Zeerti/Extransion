@@ -21,20 +21,23 @@
                     <!-- Register Number -->
                     <div class="form-group">
                         <label for="register-number">Register Number</label>
-                        <input class="input" id="default" id="register-number" name="register-number" type="number" min="1" max="100" required>
-                        <!-- <div class="registerKeyboard"></div> -->
+                        <input class="input" placeholder="Min 1 max 40" onfocus="this.placeholder=''" onblur="this.placeholder='Min 1, max 40'"  id="default" id="register-number" name="register-number" type="number" min="1" max="100" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" required>
                     </div>
                     <!-- Login Number -->
                     <div class="form-group">
                         <label for="login-code">Login Code</label>
-                        <input class="input" id="input2" type="number" id="login-code" name="login-code" required>
-                        <!-- <div class="loginKeyboard"></div> -->
+                        <input class="input" placeholder="Min 4, max 12" onfocus="this.placeholder=''"  onblur="this.placeholder='Min4, max 12'" id="input2" type="number" id="login-code" name="login-code" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" required>
                     </div>
                     <!-- Iterations -->
                     <div class="form-group">
                         <label for="iterations">How many iterations?</label>
-                        <input class="input" id="input3" type="number" max="99999" min="1" step="0" id="iterations" name="iterations" required>
-                        <!-- <div class="iterationsKeyboard"></div> -->
+                        <input class="input" placeholder="Min 1, max 10000" onfocus="this.placeholder=''" onblur="this.placeholder='Min 1, max 10000'" id="input3" type="number" max="99999" min="1" id="iterations" name="iterations" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" required>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="iterations">Delay per action in seconds</label>
+                        <input class="input" placeholder="Min .25 max 5" onfocus="this.placeholder=''" onblur="this.placeholder='Min .25, max 5'" id="input4" type="number" max="5" min=".25" id="delay" name="delay" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 46 && event.charCode <= 57" required>
+                        
                     </div>
                     <div class="form-group">
                         <button type="button" id="start">Start!</button>
@@ -54,11 +57,11 @@
         </div>
     </div>
     
-        
+    
 
+    <script src="/eel.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.min.js"></script>
     <script src="src/index.js"></script>
-    <script src="/eel.js"></script>
     <script src="src/pythonCalls.js"></script>
 </body>
 </html>

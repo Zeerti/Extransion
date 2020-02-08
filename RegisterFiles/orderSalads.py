@@ -15,7 +15,7 @@ from time import sleep
 # order each salad in first column,
 # close order
 # Function assumes you are at the main menu where the Green salad button is displayed
-def order(orderIterations):
+def orderSalads(orderIterations):
     try:
         for i in range(orderIterations):
             pyautogui.click(x=1000, y=400) # Click Salad button
