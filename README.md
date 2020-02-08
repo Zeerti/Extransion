@@ -1,6 +1,8 @@
 # Extransion
 Automating BrinkPOS for testing purposes
 
+#### Newest Versions can always be found in the release section
+
 ## Requirements
 1. Python 3.7+
 2. PyAutoGui
@@ -16,6 +18,14 @@ run the following command to download and install pyautogui
 run the following command to download and install eel
 - `pip install eel`
 
+## Running Extransion
+After installing all pre-reqs do the following:
+1. Launch command prompt as an admin
+2. navigate to main.py file location
+3. type in `python main.py`
+
+## Compliling Extransion into an EXE
+-- TODO: FILL THIS OUT
 ## Documentation
 PyAutoGui Documentation
 - https://pyautogui.readthedocs.io
