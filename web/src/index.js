@@ -3,19 +3,35 @@
 
 let Keyboard = window.SimpleKeyboard.default;
 
-let myKeyboard = new Keyboard({
+let selectedInput;
+
+let mainKeyboard = new Keyboard(".registerKeyboard", {
   onChange: input => onChange(input),
-  onKeyPress: button => onKeyPress(button),
   layout: {
     default: ["1 2 3", "4 5 6", "7 8 9", "{bksp}"],
   }
 });
 
-function onChange(input) {
-  document.querySelector(".input").value = input;
-  console.log("Input changed", input);
+document.querySelectorAll(".input").forEach(input => {
+  input.addEventListener("focus", onInputFocus);
+  // Optional: Use if you want to track input changes
+  // made without simple-keyboard
+  input.addEventListener("input", onInputChange);
+});
+
+function onInputFocus(event) {
+  selectedInput = `#${event.target.id}`;
+
+  mainKeyboard.setOptions({
+    inputName: event.target.id
+  });
 }
 
-function onKeyPress(button) {
-  console.log("Button pressed", button);
+function onInputChange(event){
+  mainKeyboard.setInput(event.target.value, event.target.id);
+}
+
+function onChange(input) {
+  console.log("Input changed", input);
+  document.querySelector(selectedInput || ".input").value = input;
 }
