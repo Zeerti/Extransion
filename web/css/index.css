@@ -1,0 +1,16 @@
+html, body {
+    min-height: 700px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    font-family: 'Roboto' sans-serif;    
+}
+
+.simple-keyboard {
+    font-family: 'Roboto' sans-serif;
+    font-weight: 600;
+    position: fixed;
+    bottom: 2px;
+    left: 2px;
+}

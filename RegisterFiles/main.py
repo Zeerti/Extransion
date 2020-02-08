@@ -47,25 +47,25 @@ def main():
     # add functions here
     # order(3000) # orders salads X times
     # orderHotDog.orderHotDogs(300)
-    eel.init('static_web_folder')
-    eel.start('index.html', mode='edge')
+    eel.init('web')
+    eel.start('index.html', mode='edge', size=(1024, 768), position=(0,0))
 
 if __name__ == '__main__':
-    pyautogui.alert('Ensure Brink is at the main menu where the salad button is visible!')
+    # pyautogui.alert('Ensure Brink is at the main menu where the salad button is visible!')
     start_time = time.time() #getting what the current time is, and saving variable
     main()
     print("--- %s seconds to execute 3000 orders in main --- " % (time.time() - start_time)) 
     #current time -prev time
    # to show what the total time was when the program finishes
 
-num = guiInput.seperated()
+# num = guiInput.seperated()
 
-for i in num:
-    if i = 1:
-        clickNumber1()
-    if i = 2:
-        clickNumber2()
-    if i = 3:
-        clickNumber3()
-    if i = 4:
-        clickNumber4()
+# for i in num:
+#     if i = 1:
+#         clickNumber1()
+#     if i = 2:
+#         clickNumber2()
+#     if i = 3:
+#         clickNumber3()
+#     if i = 4:
+#         clickNumber4()
