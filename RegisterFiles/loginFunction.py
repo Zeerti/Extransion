@@ -19,22 +19,34 @@ print(loginString)
 for i in userLogin: # need to get variables from GUI and/or mainFunction() 
     _value = int(i)
     if(_value == '1'):
-        # Click 1 on screen
+        pyautogui.click(417, 184) # Click 1 on screen
     if(_value == '2'):
-        # Click 2 on screen
+        pyautogui.click(507, 176) # Click 2 on screen
     if(_value == '3'):
-        # Click 3 on screen
+        pyautogui.click(595, 176) # Click 3 on screen
     if(_value == '4'):
-        # Click 4 on screen
+        pyautogui.click(413, 216) # Click 4 on screen
     if(_value == '5'):
-        # Click 5 on screen
+        pyautogui.click(504, 248) # Click 5 on screen
     if(_value == '6'):
-        # Click 6 on screen
+        pyautogui.click(593, 244) # Click 6 on screen
     if(_value == '7'):
-        # Click 7 on screen
+        pyautogui.click(416, 313) # Click 7 on screen
     if(_value == '8'):
-        # Click 8 on screen
+        pyautogui.click(506, 317) # Click 8 on screen
     if(_value == '9'):
-        # Click 9 on screen
+        pyautogui.click(594, 315) # Click 9 on screen
     if(_value == '0'):
-        # Click 0 on screen
+        pyautogui.click(417, 384) # Click 0 on screen
+
+## Button maps for 1024 * 768 Register 
+# 417 184 -- 1
+# 507 176 -- 2
+# 595 176 -- 3
+# 413 216 -- 4
+# 504 248 -- 5
+# 593 244 -- 6
+# 416 313 -- 7
+# 506 317 -- 8
+# 594 315 -- 9
+# 417 384 -- 0
