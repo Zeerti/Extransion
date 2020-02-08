@@ -9,7 +9,7 @@
 
 # initializing login string from user
 def loginFunction(pin): # login commands from GUI
-    loginString = input()
+    loginString = pin
 
     userLogin = [] # store login numbers from user in array
     for i in loginString:
