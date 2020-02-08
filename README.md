@@ -28,8 +28,8 @@ Simple Keyboard
 
 
 ## Credits
-On screen keypad
+simple-keyboard
 - https://github.com/hodgef/simple-keyboard
 
-GUI
+Front-End Design
 - https://codepen.io/andytran/pen/GpyKLM
