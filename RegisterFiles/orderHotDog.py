@@ -9,16 +9,17 @@
 import pyautogui
 from random import randrange
 from time import sleep
+import eel
 
 # Callback function that executes X times
+@eel.expose
 def order(numberOfOrders):
     _clicks = 0
 
-    while(_clicks < numberOfOrders):
+    while(_clicks < int(numberOfOrders)):
         # Uncomment this section to make random ordering. comment out other instance.
-        # randoNumber = randrange(3) + 1
+        randoNumber = randrange(3) + 1
         
-        randoNumber = 1
         if(randoNumber == 1):
             pyautogui.click(x=1937, y=757) # order hotdog
         if(randoNumber == 2):
@@ -28,6 +29,7 @@ def order(numberOfOrders):
         if(randoNumber == 4):
             pyautogui.click(x=2023, y=856) # order chili cheese dog
         _clicks = _clicks + 1
+        print("Ordered 2 hotdawgs")
 
 
 def orderHotDogs(iterations):

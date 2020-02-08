@@ -2,6 +2,7 @@ html, body {
     min-height: 700px;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -11,6 +12,10 @@ body {
 
 input {
     font-family: 'Roboto' sans-serif;    
+}
+
+.hidden {
+    display: none !important;
 }
 
 .simple-keyboard {
@@ -40,17 +45,17 @@ input {
     border-radius: 4px;
     box-shadow: 0 0 30px rgba(0,0,0,0.1);
     box-sizing: border-box;
-    margin: 100px auto 10px;
+    margin: 50px auto 10px;
     overflow: hidden;
 }
 
 .form-panel { 
-    padding: 60px calc(5% + 60px) 60px 60px;
+    padding: 20px calc(5% + 60px) 60px 20px;
     box-sizing: border-box;
 }
 
 .form-header {
-    margin: 0 0 40px;
+    margin: 0 0 30px;
 }
 
 .form-group {
@@ -103,6 +108,10 @@ input {
     cursor: pointer;
 }
 
+.form-group button.small {
+    width: 50% !important;
+}
+
 .form-header h1 {
     padding: 4px 0;
     color: #4285f4;
@@ -124,5 +133,5 @@ input {
 
 .displaced {
     margin-bottom: 10px !important;
-    margin-top: 0 !important;
+    margin-top: -50px !important;
 }

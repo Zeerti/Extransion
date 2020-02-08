@@ -11,49 +11,54 @@
 </head>
 <body>
     <!-- <input class="input" placeholder="Tap on the virtual keyboard to start" /> -->
+    <div class="container" id="body">
+        <div class="form" id="primary-form">
+            <div class="form-panel one">
+                <div class="form-header">
+                    <h1>Extransions</h1>
+                </div>
+                <div class="form-content">
+                    <!-- Register Number -->
+                    <div class="form-group">
+                        <label for="register-number">Register Number</label>
+                        <input class="input" id="default" id="register-number" name="register-number" type="number" min="1" max="100" required>
+                        <!-- <div class="registerKeyboard"></div> -->
+                    </div>
+                    <!-- Login Number -->
+                    <div class="form-group">
+                        <label for="login-code">Login Code</label>
+                        <input class="input" id="input2" type="number" id="login-code" name="login-code" required>
+                        <!-- <div class="loginKeyboard"></div> -->
+                    </div>
+                    <!-- Iterations -->
+                    <div class="form-group">
+                        <label for="iterations">How many iterations?</label>
+                        <input class="input" id="input3" type="number" max="99999" min="1" step="0" id="iterations" name="iterations" required>
+                        <!-- <div class="iterationsKeyboard"></div> -->
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="start">Start!</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="button small" id="close">Close Numpad</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-panel two">
     
-
-    <div class="form displaced">
-        <div class="form-panel one">
-            <div class="form-header">
-                <h1>Extransions</h1>
-            </div>
-            <div class="form-content">
-                <!-- Register Number -->
-                <div class="form-group">
-                    <label for="register-number">Register Number</label>
-                    <input class="input" id="default" type="text" id="register-number" name="register-number" required>
-                    <!-- <div class="registerKeyboard"></div> -->
-                </div>
-                <!-- Login Number -->
-                <div class="form-group">
-                    <label for="login-code">Login Code</label>
-                    <input class="input" id="input2" type="text" id="login-code" name="login-code" required>
-                    <!-- <div class="loginKeyboard"></div> -->
-                </div>
-                <!-- Iterations -->
-                <div class="form-group">
-                    <label for="iterations">How many iterations?</label>
-                    <input class="input" id="input3" type="text" id="iterations" name="iterations" required>
-                    <!-- <div class="iterationsKeyboard"></div> -->
-                </div>
-                <div class="form-group">
-                    <button type="submit">Start!</button>
-                </div>
             </div>
         </div>
-        <div class="form-panel two">
-
+    
+        <div class="keyboard-wrapper hidden" id="keyboard">
+            <div class="registerKeyboard" id="actualKeyboard"></div>
         </div>
     </div>
-
-    <div class="keyboard-wrapper">
-        <div class="registerKeyboard"></div>
-    </div>
+    
         
 
     <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.min.js"></script>
     <script src="src/index.js"></script>
     <script src="/eel.js"></script>
+    <script src="src/pythonCalls.js"></script>
 </body>
 </html>
