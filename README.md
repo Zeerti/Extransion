@@ -19,8 +19,10 @@ run the following command to download and install eel
 ## Documentation
 PyAutoGui Documentation
 - https://pyautogui.readthedocs.io
+
 Eel Documentation
 - https://github.com/samuelhwilliams/Eel
+
 Simple Keyboard
 - https://franciscohodge.com/projects/simple-keyboard/qa-use-cases/
 
@@ -28,5 +30,6 @@ Simple Keyboard
 ## Credits
 On screen keypad
 - https://github.com/hodgef/simple-keyboard
+
 GUI
 - https://codepen.io/andytran/pen/GpyKLM
