@@ -3,6 +3,7 @@
 
 # this should execute once after the initial login
 
+import pyautogui
 def clockIn():
     pyautogui.click(727, 739) # Click clockin
 

@@ -2,7 +2,7 @@
 # Login > Clock in > Manager Functions > Assign drawer > Go to Menu
 
 ## ---dont forget to import CASH DRAWER GRID---
-
+import pyautogui
 #import calculateGridPosition
 def cashDrawerAssign():
     _reg = reg # new variable for register number
