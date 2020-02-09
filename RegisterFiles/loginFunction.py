@@ -1,8 +1,8 @@
-# Function to get the login number
-# Read user input for login as string
-# Store string in list
+# Function to set the login number on POS
+# Store input in list
 # Input will be from GUI
-# Print(userLogin) -- only used for testing purposes
+# Input translated to login button map
+# Button coordinates triggered with PyAutoGui.click
 
 ## --reserved for later use--
 # length = len(userLogin) # get total length of array to set list() dynamically
@@ -18,9 +18,9 @@ def loginFunction(pin): # login commands from GUI
     userLogin = [] # store login numbers from user in array
     for i in loginString:
         userLogin.append(i)
-    print(loginString)
 
-    for i in userLogin: # need to get variables from GUI and/or mainFunction() 
+    # Numbers input by user mapped to coordinates on login screen
+    for i in userLogin: 
         _value = int(i)
         if(_value == 1):
             pyautogui.click(417, 184) # Click 1 on screen
