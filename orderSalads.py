@@ -22,14 +22,10 @@ def order(orderIterations):
             pyautogui.click(x=800, y=275) # Click top most salad in column
             for i in range(6): # Iterate through all the rest of the salads. Each button is 113 pixels apart. 
                 pyautogui.move(0,113) # Move mouse down 113 pixels from current position to hit next button in column
-                pyautogui.click()
+                pyautogui.click() # Click
             pyautogui.click(x=2400, y=1300) # Pay / close order
             pyautogui.click(x=1600, y=400) # Exact Cash button
-            sleep(1) # 1 second sleep while punchh does its thing
-            pyautogui.click(x=1600, y=400) # touch anywhere to "ok" the Change Due
+            # sleep(1) # 1 second sleep while punchh does its thing
+            pyautogui.click(x=1600, y=400)
     except TypeError:
-        pyautogui.alert('Invalid operation!')
-
-
-# order 2 hot dogs
-# Tender and close
+        print('Oops! That was an invalid number for the "orderSalads" function. Please try again.')

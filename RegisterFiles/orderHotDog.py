@@ -10,22 +10,35 @@
 ##########################################################################################
 
 import pyautogui
+from random import randrange
 from time import sleep
-# Click salad section,
-# order each salad in first column,
-# close order
-# Function assumes you are at the main menu where the Green salad button is displayed
-def order(orderIterations):
+
+# Callback function that executes X times
+def order(numberOfOrders):
+    _clicks = 0
+
+    while(_clicks < int(numberOfOrders)):
+        # Uncomment this section to make random ordering. comment out other instance.
+        randoNumber = randrange(3) + 1
+
+        if(randoNumber == 1):
+            pyautogui.click(x=359, y=110) # order hotdog
+        if(randoNumber == 2):
+            pyautogui.click(x=355, y=192) # order chili dog
+        if(randoNumber == 3):
+            pyautogui.click(x=453, y=106) # order cheese dog
+        if(randoNumber == 4):
+            pyautogui.click(x=452, y=192) # order chili cheese dog
+        _clicks = _clicks + 1
+        print("Ordered 2 hotdawgs")
+
+
+def orderHotDogs(iterations):
     try:
-        for i in range(orderIterations):
-            pyautogui.click(x=358, y=101) # Click menu button
-            # pyautogui.click(x=800, y=275) # Click (Not needed for this layout)
-            for i in range(2): # Iterate through all the rest of the salads. Each button is 113 pixels apart. 
-                pyautogui.click(646,297) # Order Hot Dog
-                pyautogui.click(646,297) # Order Hot Dog
-            pyautogui.click(x=242, y=711) # Cash button, bottom of order lane
-            pyautogui.click(x=552, y=572) # Done button
-            sleep(1) # 1 second sleep while punchh does its thing
-            pyautogui.click(x=901, y=378) # touch anywhere to "ok" the Change Due
+        for i in range(iterations):
+            order(2) # Order X random things that are hotdogs
+            pyautogui.click(x=663, y=647) #Exact Cash button
+            pyautogui.click(x=764, y=581, clicks=2, interval=.25) # Okay button / confirm change
     except TypeError:
-        pyautogui.alert('Invalid operation!')
+        print('General Error')
+
