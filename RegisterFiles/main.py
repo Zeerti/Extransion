@@ -1,7 +1,6 @@
 import pyautogui
 import time
 import eel
-from orderSalads import order
 import orderHotDog
 import loginFunction
 # Adds a pause between all actions
