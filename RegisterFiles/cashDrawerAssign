@@ -2,12 +2,17 @@
 # Login > Clock in > Manager Functions > Assign drawer > Go to Menu
 
 ## ---dont forget to import CASH DRAWER GRID---
+
 #import calculateGridPosition
 def cashDrawerAssign():
+    _reg = reg # new variable for register number
+
     pyautogui.click(812, 27) # Click Manager functions
     pyautogui.click(510, 178) # Click Manager drawers
             
-# Call to cash drawer map function goes here
+    # Call to cash drawer grid
+    _x, _y = cashDrawerAssign(_reg)
+    pyautogui.click(_x, _y) #click cash drawer grid
 
     pyautogui.click(87, 729) # Click Assign button
     pyautogui.click(381, 338) # Click top left available employee
