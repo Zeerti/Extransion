@@ -27,7 +27,6 @@ pyautogui.FAILSAFE = True
 #5 second to order
 #smoketest-k91 TO K93
 #smoketest-r01 -- R1
-
 def main():
     # add functions here
     # order(3000) # orders salads X times
