@@ -18,25 +18,25 @@ def loginFunction(pin): # login commands from GUI
 
     for i in userLogin: # need to get variables from GUI and/or mainFunction() 
         _value = int(i)
-        if(_value == '1'):
+        if(_value == 1):
             pyautogui.click(417, 184) # Click 1 on screen
-        if(_value == '2'):
+        if(_value == 2):
             pyautogui.click(507, 176) # Click 2 on screen
-        if(_value == '3'):
+        if(_value == 3):
             pyautogui.click(595, 176) # Click 3 on screen
-        if(_value == '4'):
+        if(_value == 4):
             pyautogui.click(413, 216) # Click 4 on screen
-        if(_value == '5'):
+        if(_value == 5):
             pyautogui.click(504, 248) # Click 5 on screen
-        if(_value == '6'):
+        if(_value == 6):
             pyautogui.click(593, 244) # Click 6 on screen
-        if(_value == '7'):
+        if(_value == 7):
             pyautogui.click(416, 313) # Click 7 on screen
-        if(_value == '8'):
+        if(_value == 8):
             pyautogui.click(506, 317) # Click 8 on screen
-        if(_value == '9'):
+        if(_value == 9):
             pyautogui.click(594, 315) # Click 9 on screen
-        if(_value == '0'):
+        if(_value == 0):
             pyautogui.click(417, 384) # Click 0 on screen
 
     ## Button maps for 1024 * 768 Register 
