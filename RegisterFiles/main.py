@@ -2,7 +2,7 @@ import pyautogui
 import time
 import eel
 import errorHandler
-import execution
+
 import orderHotDog
 import loginFunction
 # Adds a pause between all actions

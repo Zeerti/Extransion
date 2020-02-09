@@ -20,6 +20,9 @@ def assembly(login, reg, iterations):
     loginFunction(_login)
     clockInFunction()
     cashDrawerAssign(_reg)
-    order(2)
-    cashOut()
+    
+    # Order hot dogs and cash out orders until iterations complete
+    for i in range(_iterations):
+        order(2)
+        cashOut()
 
