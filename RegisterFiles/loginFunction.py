@@ -7,7 +7,11 @@
 ## --reserved for later use--
 # length = len(userLogin) # get total length of array to set list() dynamically
 
+import pyautogui
+import eel
+
 # initializing login string from user
+@eel.expose
 def loginFunction(pin): # login commands from GUI
     loginString = pin
 
