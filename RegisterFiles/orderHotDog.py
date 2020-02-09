@@ -1,10 +1,13 @@
-# 1937 757(x2) -- Hotdog
-# 2200 1285 -- Exact Cash
-# 2340 1238x2 -- Okay button / confirm no cash back
-# send key(1) -- Bump from kitchen
-# 1934 843
-# 2034 783
-# 2023 856
+# Repeat ad nauseam 
+# 1000 400 -- Salad button
+# 800 275 -- Baja 
+# Press down the row, increase Y by 113 each iteration (x6)
+# 2400 1300 -- PAY / CLOSE ORDER
+# 1600 400 -- Exact Cash Button
+# Need to add a delay due to "contacting punch"
+# Click anywhere again once (Change Due message)
+# AND REPEAT AND REPEAT AND REPEAT AND REPEAT
+##########################################################################################
 
 import pyautogui
 from random import randrange
@@ -14,7 +17,7 @@ from time import sleep
 def order(numberOfOrders):
     _clicks = 0
 
-    while(_clicks < numberOfOrders):
+    while(_clicks < int(numberOfOrders)):
         # Uncomment this section to make random ordering. comment out other instance.
         randoNumber = randrange(3) + 1
 
@@ -27,6 +30,7 @@ def order(numberOfOrders):
         if(randoNumber == 4):
             pyautogui.click(x=452, y=192) # order chili cheese dog
         _clicks = _clicks + 1
+        print("Ordered 2 hotdawgs")
 
 
 def orderHotDogs(iterations):
@@ -37,6 +41,4 @@ def orderHotDogs(iterations):
             pyautogui.click(x=764, y=581, clicks=2, interval=.25) # Okay button / confirm change
     except TypeError:
         print('General Error')
-
-
 
