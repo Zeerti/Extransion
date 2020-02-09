@@ -1,0 +1,66 @@
+Mapping for that ice cream concept
+
+login
+503, 256
+OK button
+595, 393
+Manager Functions
+812, 27
+Manage Drawer
+510, 178
+Cash drawer
+145, 80
+Assign
+87, 729
+Employee for drawer
+381 338
+Bank = $100
+419 234
+508 447
+508 447
+OK
+442 572
+Done
+932 724
+Menu
+358 101
+
+Employee for drawer
+381 338 
+
+Bank = $100
+419 234
+508 447
+508 447
+
+OK
+442 572
+
+Done
+932 724
+
+Menu
+358 101
+
+-----------------------
+Hot Dog
+646 297
+646 297
+
+Cash
+242 711
+
+Done
+552 572
+
+Click past change due screen
+901 378
+
+----------------------
+Go to hot dog and order again
+
+
+
+ 
+
+

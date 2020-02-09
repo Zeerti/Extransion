@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Extransion</title>
+</head>
+<body>
+    <!-- <input class="input" placeholder="Tap on the virtual keyboard to start" /> -->
+    <div class="container" id="body">
+        <div class="form" id="primary-form">
+            <div class="form-panel one">
+                <div class="form-header">
+                    <h1>Extransions</h1>
+                </div>
+                <div class="form-content">
+                    <!-- Register Number -->
+                    <div class="form-group">
+                        <label for="register-number">Register Number</label>
+                        <input class="input" id="default" id="register-number" name="register-number" type="number" min="1" max="100" required>
+                        <!-- <div class="registerKeyboard"></div> -->
+                    </div>
+                    <!-- Login Number -->
+                    <div class="form-group">
+                        <label for="login-code">Login Code</label>
+                        <input class="input" id="input2" type="number" id="login-code" name="login-code" required>
+                        <!-- <div class="loginKeyboard"></div> -->
+                    </div>
+                    <!-- Iterations -->
+                    <div class="form-group">
+                        <label for="iterations">How many iterations?</label>
+                        <input class="input" id="input3" type="number" max="99999" min="1" step="0" id="iterations" name="iterations" required>
+                        <!-- <div class="iterationsKeyboard"></div> -->
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="start">Start!</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="button small" id="close">Close Numpad</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-panel two">
+    
+            </div>
+        </div>
+    
+        <div class="keyboard-wrapper hidden" id="keyboard">
+            <div class="registerKeyboard" id="actualKeyboard"></div>
+        </div>
+    </div>
+    
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.min.js"></script>
+    <script src="src/index.js"></script>
+    <script src="/eel.js"></script>
+    <script src="src/pythonCalls.js"></script>
+</body>
+</html>
