@@ -1,3 +1,4 @@
+// Javascript file  strictly controlling the way the GUI displays and looks
 // On Screen Keyboard for GUI so user can input variables
 
 
@@ -8,7 +9,7 @@ let selectedInput;
 let mainKeyboard = new Keyboard(".registerKeyboard", {
   onChange: input => onChange(input),
   layout: {
-    default: ["1 2 3", "4 5 6", "7 8 9", "0 {bksp}"],
+    default: ["1 2 3", "4 5 6", "7 8 9", "0 . {bksp}"],
   }
 });
 
@@ -38,7 +39,6 @@ function onInputFocus(event) {
 }
 
 function onFocusLoss(event) {
-  console.log("FOCUS LOSS!");
   keyboardElement = document.getElementById('keyboard');
   keyboardElement.className = 'hidden';
   formElement = document.getElementById("primary-form");

@@ -12,17 +12,15 @@
 import pyautogui
 from random import randrange
 from time import sleep
-import eel
 
 # Callback function that executes X times
-@eel.expose
 def order(numberOfOrders):
     _clicks = 0
 
     while(_clicks < int(numberOfOrders)):
         # Uncomment this section to make random ordering. comment out other instance.
         randoNumber = randrange(3) + 1
-        
+
         if(randoNumber == 1):
             pyautogui.click(x=359, y=110) # order hotdog
         if(randoNumber == 2):
@@ -39,8 +37,8 @@ def orderHotDogs(iterations):
     try:
         for i in range(iterations):
             order(2) # Order X random things that are hotdogs
-            pyautogui.click(x=2200, y=1285) #Exact Cash button
-            pyautogui.click(x=2340, y=1238, clicks=2, interval=.25) # Okay button / confirm change
-            pyautogui.press('1', presses=2)
+            pyautogui.click(x=663, y=647) #Exact Cash button
+            pyautogui.click(x=764, y=581, clicks=2, interval=.25) # Okay button / confirm change
     except TypeError:
         print('General Error')
+
