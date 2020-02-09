@@ -1,8 +1,9 @@
 # Assign cash drawer
 # Login > Clock in > Manager Functions > Assign drawer > Go to Menu
-# 
 
-def cashDrawerAssign()
+## ---dont forget to import CASH DRAWER GRID---
+#import calculateGridPosition
+def cashDrawerAssign():
     pyautogui.click(812, 27) # Click Manager functions
     pyautogui.click(510, 178) # Click Manager drawers
             
