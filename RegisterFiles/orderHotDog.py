@@ -12,10 +12,8 @@
 import pyautogui
 from random import randrange
 from time import sleep
-import eel
 
 # Callback function that executes X times
-@eel.expose
 def order(numberOfOrders):
     _clicks = 0
 
