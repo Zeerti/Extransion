@@ -1,3 +1,4 @@
+// Javascript file  strictly controlling the way the GUI displays and looks
 // On Screen Keyboard for GUI so user can input variables
 
 

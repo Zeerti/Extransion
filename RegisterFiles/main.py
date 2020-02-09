@@ -3,6 +3,8 @@ import time
 import eel
 import errorHandler
 import execution
+import orderHotDog
+import loginFunction
 # Adds a pause between all actions
 pyautogui.PAUSE = .1
 # Moving mouse to upper-left will abort program when true
@@ -26,23 +28,6 @@ pyautogui.FAILSAFE = True
 #5 second to order
 #smoketest-k91 TO K93
 #smoketest-r01 -- R1
-
-
-# Only needs to be done once a day.
-## Login (x4)
-## 1187, 181
-## Set drawer if needed
-## 1610 56 -- manager
-## 1592 350 -- Manage Drawers
-## 800 100 -- CD1 - TO-GO
-## 300 1400 -- Assign Drawer
-## 1100 700 -- Name of person to assign to
-## 1200 900 -- Set bank amount
-## 2300 1400 -- Close drawer management
-## 2400 50 -- Logout
-## 1187 181(x4) -- Login
-### click anywhere again once (Due to Busi-date not matching)
-
 def main():
     # add functions here
     # order(3000) # orders salads X times
