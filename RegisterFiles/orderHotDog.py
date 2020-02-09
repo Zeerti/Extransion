@@ -24,15 +24,15 @@ def order(numberOfOrders):
         randoNumber = randrange(3) + 1
         
         if(randoNumber == 1):
-            pyautogui.click(x=1937, y=757) # order hotdog
+            pyautogui.click(x=359, y=110) # order hotdog
         if(randoNumber == 2):
-            pyautogui.click(x=1934, y=843) # order chili dog
+            pyautogui.click(x=355, y=192) # order chili dog
         if(randoNumber == 3):
-            pyautogui.click(x=2034, y=783) # order cheese dog
+            pyautogui.click(x=453, y=106) # order cheese dog
         if(randoNumber == 4):
-            pyautogui.click(x=2023, y=856) # order chili cheese dog
+            pyautogui.click(x=452, y=192) # order chili cheese dog
         _clicks = _clicks + 1
-        print("Ordered 2 hotdawgs")
+        # print("Ordered 2 hotdawgs") - for testing purposes
 
 
 def orderHotDogs(iterations):
