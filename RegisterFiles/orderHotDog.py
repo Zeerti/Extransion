@@ -30,7 +30,7 @@ def order(numberOfOrders):
         if(randoNumber == 4):
             pyautogui.click(x=452, y=192) # order chili cheese dog
         _clicks = _clicks + 1
-        print("Ordered 2 hotdawgs")
+        # print("Ordered 2 hotdawgs") - for testing purposes
 
 
 def orderHotDogs(iterations):
