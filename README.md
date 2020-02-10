@@ -30,7 +30,7 @@ After installing all pre-reqs do the following:
 2. Open command prompt
 3. Navigate to the root folder, `\Extransion\`
 4. type in the following command:
- - `python -m eel RegisterFiles\main.py web --onefile --noconsole`
+ - `python -m eel RegisterFiles\main.py web --onefile`
 ## Documentation
 PyAutoGui Documentation
 - https://pyautogui.readthedocs.io
