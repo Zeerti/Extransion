@@ -27,7 +27,7 @@ def loginFunction(pin): # login commands from GUI
         if(_value == 3):
             pyautogui.click(595, 176) # Click 3 on screen
         if(_value == 4):
-            pyautogui.click(413, 225) # Click 4 on screen was 216
+            pyautogui.click(413, 245) # Click 4 on screen was 216
         if(_value == 5):
             pyautogui.click(504, 248) # Click 5 on screen
         if(_value == 6):
