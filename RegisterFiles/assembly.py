@@ -30,7 +30,6 @@ def assembly(login, reg, iterations, delay):
     # Order hot dogs and cash out orders until iterations complete
     for i in range(_iterations):
         rand = randrange(15, 45) #Set the random range to delay next order.
-        print(f"Sleeping {rand} seconds zZzZz...")
         sleep(rand)
         orderHotDog.order(2)
         cashOutFunction.cashOut()

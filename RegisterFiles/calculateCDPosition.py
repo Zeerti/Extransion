@@ -29,8 +29,6 @@ def calculateCoords(regNum):
     # multiply X and Y by button width and height to get screen coords
     # _x *= 233 
     # _y *= 68
-    if(_x == 2):
-        print((_x * _cdX) + _cdOffsetX)
 
     _x = ((_x-1) * _cdX) + _cdOffsetX
     _y = ((_y-1) * _cdY) + _cdOffsetY
