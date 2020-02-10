@@ -4,20 +4,23 @@ element.addEventListener('click', start);
 
 
 
-function validate_data(event) {
+function isKitchenChecked(){
+    isKitchen = document.getElementById('isKitchen');
+    return isKitchen.checked;
+}
 
+function validate_data(event) {
     registerNumber = document.getElementById('default');
     loginCode = document.getElementById('input2');
     iterations = document.getElementById('input3');
     delay = document.getElementById('input4');
-
     // default input2 input3
+    
     registerValue = Number(registerNumber.value);
     loginValue = Number(loginCode.value);
     iterationsValue = Number(iterations.value);
     delayValue = Number(delay.value);
 
-    console.log(registerValue, loginCode.value.length, iterationsValue, delayValue);
 
     // flag to return on if validated or not
     let validated = false;
@@ -79,8 +82,17 @@ function validate_data(event) {
 }
 
 function start() {
-    validated = validate_data()
+    console.log("Kitchen: ",isKitchenChecked(),"\nValid: ", validate_data())
+    if(isKitchenChecked()){
+        console.log("Bumping it up yo")
+        eel.bump()
+    } else {
+        console.log("Validating");
+        validated = validate_data()
+    }
+    
     if(validated) {
+        console.log("STARTING THINGS");
         eel.showPopup('alert', 'Things would run here', `Minimize Extransion window, then click OK to begin`);
         eel.assembly(loginCode.value, registerValue, iterationsValue, delay.value)
     }
