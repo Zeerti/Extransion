@@ -3,6 +3,7 @@ import time
 import eel
 import errorHandler
 import assembly
+import kitchenBump
 
 
 # Adds a pause between all actions

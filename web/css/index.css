@@ -77,7 +77,6 @@ input {
 }
 
 .form-group label {
-    display: block;
     margin: 0 0 10px;
     color: rgba(0,0,0,0.6);
     font-size: 12px;
@@ -89,7 +88,6 @@ input {
 
 .form-group input {
     outline: none;
-    display: block;
     background: rgba(0,0,0,0.05);
     width: 100%;
     border: 0;
@@ -145,4 +143,23 @@ input {
 .displaced {
     margin-bottom: 10px !important;
     margin-top: -100px !important;
+}
+
+.form-kitchen input {
+    width: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.form-kitchen {
+    width: 100%;
+}
+
+.form-kitchen label {
+    width: 100%;
+    color: rgba(0,0,0,0.6);
+    line-height: 1;
+
 }
