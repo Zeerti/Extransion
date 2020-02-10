@@ -36,8 +36,8 @@ def assembly(login, reg, iterations, delay):
         orderHotDog.order(2)
         cashOutFunction.cashOut()
         print(f"Completed order {i} of {_iterations}")
-    print(f"Completed {_iterations} in {time() - startTime}")
-    pyautogui.alert(text=f"Completed {_iterations} in {int(time() - startTime)}", title="COMPLETED TEST", button="OK")
+    print(f"Completed {_iterations} orders in {time() - startTime} seconds")
+    pyautogui.alert(text=f"Completed {_iterations} orders in {int(time() - startTime)} seconds", title="COMPLETED TEST", button="OK")
     
 
 
