@@ -1,7 +1,8 @@
 # Extransion
 Automating BrinkPOS for testing purposes
 
-#### Newest Versions can always be found in the release section
+## Releases
+https://github.com/Zeerti/Extransion/releases
 
 ## Requirements
 1. Python 3.7+
