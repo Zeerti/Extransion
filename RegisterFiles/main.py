@@ -2,11 +2,11 @@ import pyautogui
 import time
 import eel
 import errorHandler
+import assembly
 
-import orderHotDog
-import loginFunction
+
 # Adds a pause between all actions
-pyautogui.PAUSE = .1
+# pyautogui.PAUSE = 1
 # Moving mouse to upper-left will abort program when true
 pyautogui.FAILSAFE = True
 

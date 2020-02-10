@@ -40,5 +40,5 @@ def orderHotDogs(iterations):
             pyautogui.click(x=663, y=647) #Exact Cash button
             pyautogui.click(x=764, y=581, clicks=2, interval=.25) # Okay button / confirm change
     except TypeError:
-        print('General Error')
+        pyautogui.alert(text="General Error occurred while ordering", title="Unknown Error")
 

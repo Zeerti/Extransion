@@ -81,6 +81,7 @@ function validate_data(event) {
 function start() {
     validated = validate_data()
     if(validated) {
-        eel.showPopup('alert', 'Things would run here', `Things should run here now`);
+        eel.showPopup('alert', 'Things would run here', `Minimize Extransion window, then click OK to begin`);
+        eel.assembly(loginCode.value, registerValue, iterationsValue, delay.value)
     }
 }
