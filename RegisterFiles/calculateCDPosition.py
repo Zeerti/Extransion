@@ -1,8 +1,7 @@
 import pyautogui
 
-# file 1
 def calculateCoords(regNum):
-    _reg = regNum
+    _reg = int(regNum)
 
     _y = 1
     _x = 1
@@ -38,21 +37,6 @@ def calculateCoords(regNum):
     
     return (_x, _y)
 
-
-for f in range(1, 30):
-    print(f"COORDS: {calculateCoords(f)}\nF: {f}\n------------")
-
-# Button Dimensions
-# Width: 233
-# Height: 68
-
-# 10 Columns
-# 4 rows
-
-# When X > 10, add 1 to Y
-# When Y = 4 and X = 10 you hit the max.
-
-# So Register 13 would be 
 
 
 

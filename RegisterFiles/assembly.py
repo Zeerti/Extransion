@@ -9,20 +9,30 @@
 import loginFunction
 import clockInFunction
 import cashDrawerAssign
+import cashOutFunction
 import orderHotDog
+import eel
+import pyautogui
+from random import randrange
+from time import sleep
 
-def assembly(login, reg, iterations):
+@eel.expose
+def assembly(login, reg, iterations, delay):
     _login = login # temp val for user login
     _reg = reg      # temp val for register number
-    _iterations = iterations    # temp val for orders
-    
+    _iterations = int(iterations)    # temp val for orders
+    pyautogui.PAUSE = float(delay)
     # Function calls with temp val
-    loginFunction(_login)
-    clockInFunction()
-    cashDrawerAssign(_reg)
+    loginFunction.loginFunction(_login)
+    clockInFunction.clockIn()
+    cashDrawerAssign.cashDrawerAssign(_reg)
     
     # Order hot dogs and cash out orders until iterations complete
     for i in range(_iterations):
-        order(2)
-        cashOut()
+        rand = randrange(15, 45) #Set the random range to delay next order.
+        print(f"Sleeping {rand} seconds zZzZz...")
+        sleep(rand)
+        orderHotDog.order(2)
+        cashOutFunction.cashOut()
+
 

@@ -42,7 +42,7 @@ def cashDrawerAssign(reg):
     pyautogui.click(515, 257) # Click Manager drawers
             
     # Call to cash drawer grid
-    _x, _y = calculateCoords(_reg) # returns coords for drawer click
+    _x, _y = calculateCDPosition.calculateCoords(_reg) # returns coords for drawer click
     pyautogui.click(_x, _y) #click cash drawer grid
 
     pyautogui.click(95, 724) # Click Assign button
