@@ -14,10 +14,11 @@ import orderHotDog
 import eel
 import pyautogui
 from random import randrange
-from time import sleep
+from time import sleep, time
 
 @eel.expose
 def assembly(login, reg, iterations, delay):
+    startTime = time()
     _login = login # temp val for user login
     _reg = reg      # temp val for register number
     _iterations = int(iterations)    # temp val for orders
@@ -30,8 +31,13 @@ def assembly(login, reg, iterations, delay):
     # Order hot dogs and cash out orders until iterations complete
     for i in range(_iterations):
         rand = randrange(15, 45) #Set the random range to delay next order.
+        print(f"Sleeping {rand} seconds ZzZzZz...")
         sleep(rand)
         orderHotDog.order(2)
         cashOutFunction.cashOut()
+        print(f"Completed order {i} of {_iterations}")
+    print(f"Completed {_iterations} in {time() - startTime}")
+    pyautogui.alert(text=f"Completed {_iterations} in {int(time() - startTime)}", title="COMPLETED TEST", button="OK")
+    
 
 
