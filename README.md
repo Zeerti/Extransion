@@ -1,7 +1,8 @@
 # Extransion
 Automating BrinkPOS for testing purposes
 
-#### Newest Versions can always be found in the release section
+## Releases
+https://github.com/Zeerti/Extransion/releases
 
 ## Requirements
 1. Python 3.7+
@@ -25,10 +26,11 @@ After installing all pre-reqs do the following:
 3. type in `python main.py`
 
 ## Compliling Extransion into an EXE
-1. Open command prompt
-2. Navigate to the root folder, `Extransion`
-3. type in the following command:
- - `python -m eel RegisterFiles\main.py web --onefile --noconsole`
+1. Make sure you have `PyInstall` installed
+2. Open command prompt
+3. Navigate to the root folder, `\Extransion\`
+4. type in the following command:
+ - `python -m eel RegisterFiles\main.py web --onefile --debug --icon=".\icon.ico"`
 ## Documentation
 PyAutoGui Documentation
 - https://pyautogui.readthedocs.io
