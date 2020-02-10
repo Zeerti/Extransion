@@ -82,9 +82,10 @@ function validate_data(event) {
 }
 
 function start() {
-    console.log("Kitchen: ",isKitchenChecked(),"\nValid: ", validate_data())
+    // console.log("Kitchen: ",isKitchenChecked(),"\nValid: ", validate_data())
     if(isKitchenChecked()){
-        console.log("Bumping it up yo")
+        console.log("Beginning bumping")
+        eel.showPopup('alert', 'Preparing to Start Test', `Minimize Extransion windows, then click OK to begin`);
         eel.bump()
     } else {
         console.log("Validating");
@@ -93,7 +94,7 @@ function start() {
     
     if(validated) {
         console.log("STARTING THINGS");
-        eel.showPopup('alert', 'Things would run here', `Minimize Extransion window, then click OK to begin`);
+        eel.showPopup('alert', 'Preparing to Start Test', `Minimize Extransion window, then click OK to begin`);
         eel.assembly(loginCode.value, registerValue, iterationsValue, delay.value)
     }
 }

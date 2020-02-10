@@ -38,7 +38,6 @@ def main():
 
 if __name__ == '__main__':
     # pyautogui.alert('Ensure Brink is at the main menu where the salad button is visible!')
-    start_time = time.time() #getting what the current time is, and saving variable
     main()
     #current time -prev time
    # to show what the total time was when the program finishes
