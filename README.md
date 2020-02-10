@@ -26,9 +26,10 @@ After installing all pre-reqs do the following:
 3. type in `python main.py`
 
 ## Compliling Extransion into an EXE
-1. Open command prompt
-2. Navigate to the root folder, `Extransion`
-3. type in the following command:
+1. Make sure you have `PyInstall` installed
+2. Open command prompt
+3. Navigate to the root folder, `Extransion`
+4. type in the following command:
  - `python -m eel RegisterFiles\main.py web --onefile --noconsole`
 ## Documentation
 PyAutoGui Documentation
