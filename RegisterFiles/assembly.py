@@ -17,16 +17,23 @@ from random import randrange
 from time import sleep, time
 
 @eel.expose
-def assembly(login, reg, iterations, delay):
+def assembly(login, reg, iterations, delay, skipClockin):
     startTime = time()
     _login = login # temp val for user login
     _reg = reg      # temp val for register number
     _iterations = int(iterations)    # temp val for orders
     pyautogui.PAUSE = float(delay)
-    # Function calls with temp val
-    loginFunction.loginFunction(_login)
-    clockInFunction.clockIn()
-    cashDrawerAssign.cashDrawerAssign(_reg)
+    
+    if(skipClockin == True):
+        print(f"Skipping ClockingIn and Drawer Assignment")
+        loginFunction.loginFunction(_login)
+        pyautogui.click(751, 612) # Click Manager functions
+        pyautogui.click(377, 25) # Select Menu for ordering
+    else:
+        loginFunction.loginFunction(_login)
+        clockInFunction.clockIn()
+        cashDrawerAssign.cashDrawerAssign(_reg)    
+    
     
     # Order hot dogs and cash out orders until iterations complete
     for i in range(_iterations):
