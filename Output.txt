@@ -1,0 +1,108 @@
+Dialog - 'Register'    (L4071, T81, R5095, B849)
+['Register', 'RegisterDialog', 'Dialog', 'Dialog0', 'Dialog1']
+child_window(title="Register", control_type="Window")
+   | 
+   | Dialog - 'Snoop - Snoop'    (L2552, T33, R3679, B1070)
+   | ['Snoop - Snoop', 'Snoop - SnoopDialog', 'Dialog2']
+   | child_window(title="Snoop - Snoop", control_type="Window")
+   | 
+   | Custom - ''    (L4071, T81, R4371, B691)
+   | ['Binding ErrorsCustom', 'Custom51', 'Binding ErrorsCustom0', 'Binding ErrorsCustom1']
+   | 
+   | Custom - ''    (L4071, T826, R5095, B849)
+   | ['R1 / Custom', 'Custom56', 'R1 / Custom0', 'R1 / Custom1']
+   | 
+   | Custom - ''    (L4071, T691, R5095, B826)
+   | ['Balance Due:Custom', 'Custom60', 'Balance Due:Custom0', 'Balance Due:Custom1']
+   | 
+   | Custom - ''    (L4371, T81, R5095, B150)
+   | ['Enter Employee NumberCustom', 'Custom77', 'Enter Employee NumberCustom0', 'Enter Employee NumberCustom1']
+   | 
+   | Custom - ''    (L4371, T150, R4853, B691)
+   | ['Enter Employee NumberCustom8', 'Custom84']
+   | 
+   | Custom - ''    (L4853, T150, R5095, B691)
+   | ['Enter Employee NumberCustom18', 'Custom118']
+   | 
+   | Custom - ''    (L4071, T81, R5095, B849)
+   | ['Binding ErrorsCustom3', 'Custom143']
+   | child_window(auto_id="_loginScreen", control_type="Custom")
+   | 
+   | Custom - ''    (L4071, T81, R5095, B849)
+   | ['Binding ErrorsCustom4', 'Custom144']
+   | child_window(auto_id="_screenSaver", control_type="Custom")
+
+
+
+Control Identifiers:
+
+Dialog - 'Register'    (L4071, T81, R5095, B849)
+['Register', 'RegisterDialog', 'Dialog', 'Dialog0', 'Dialog1']
+child_window(title="Register", control_type="Window")
+   | 
+   | Dialog - 'Snoop - Snoop'    (L2552, T33, R3679, B1070)
+   | ['Snoop - Snoop', 'Snoop - SnoopDialog', 'Dialog2']
+   | child_window(title="Snoop - Snoop", control_type="Window")
+   | 
+   | Custom - ''    (L4071, T81, R4371, B691)
+   | ['Binding ErrorsCustom', 'Custom51', 'Binding ErrorsCustom0', 'Binding ErrorsCustom1']
+   | 
+   | Custom - ''    (L4071, T826, R5095, B849)
+   | ['R1 / Custom', 'Custom56', 'R1 / Custom0', 'R1 / Custom1']
+   | 
+   | Custom - ''    (L4071, T691, R5095, B826)
+   | ['Balance Due:Custom', 'Custom60', 'Balance Due:Custom0', 'Balance Due:Custom1']
+   | 
+   | Custom - ''    (L4371, T81, R5095, B150)
+   | ['Enter Employee NumberCustom', 'Custom77', 'Enter Employee NumberCustom0', 'Enter Employee NumberCustom1']
+   | 
+   | Custom - ''    (L4371, T150, R4853, B691)
+   | ['Enter Employee NumberCustom8', 'Custom84']
+   | 
+   | Custom - ''    (L4853, T150, R5095, B691)
+   | ['Enter Employee NumberCustom18', 'Custom118']
+   | 
+   | Custom - ''    (L4071, T81, R5095, B849)
+   | ['Binding ErrorsCustom3', 'Custom143']
+   | child_window(auto_id="_loginScreen", control_type="Custom")
+   | 
+   | Custom - ''    (L4071, T81, R5095, B849)
+   | ['Binding ErrorsCustom4', 'Custom144']
+   | child_window(auto_id="_screenSaver", control_type="Custom")
+
+
+
+Control Identifiers:
+
+Dialog - 'Register'    (L4071, T81, R5095, B849)
+['Register', 'RegisterDialog', 'Dialog', 'Dialog0', 'Dialog1']
+child_window(title="Register", control_type="Window")
+   | 
+   | Dialog - 'Snoop - Snoop'    (L2552, T33, R3679, B1070)
+   | child_window(title="Snoop - Snoop", control_type="Window")
+   |
+   | Custom - ''    (L4071, T81, R4371, B691)
+   | ['Binding ErrorsCustom', 'Custom51', 'Binding ErrorsCustom0', 'Binding ErrorsCustom1']
+   |
+   | Custom - ''    (L4071, T826, R5095, B849)
+   | ['R1 / Custom', 'Custom56', 'R1 / Custom0', 'R1 / Custom1']
+   |
+   | Custom - ''    (L4071, T691, R5095, B826)
+   | ['Balance Due:Custom', 'Custom60', 'Balance Due:Custom0', 'Balance Due:Custom1']
+   |
+   | Custom - ''    (L4371, T81, R5095, B150)
+   | ['Enter Employee NumberCustom', 'Custom77', 'Enter Employee NumberCustom0', 'Enter Employee NumberCustom1']
+   |
+   | Custom - ''    (L4371, T150, R4853, B691)
+   | ['Enter Employee NumberCustom8', 'Custom84']
+   |
+   | Custom - ''    (L4853, T150, R5095, B691)
+   | ['Enter Employee NumberCustom18', 'Custom118']
+   |
+   | Custom - ''    (L4071, T81, R5095, B849)
+   | ['Binding ErrorsCustom3', 'Custom143']
+   | child_window(auto_id="_loginScreen", control_type="Custom")
+   |
+   | Custom - ''    (L4071, T81, R5095, B849)
+   | ['Binding ErrorsCustom4', 'Custom144']
+   | child_window(auto_id="_screenSaver", control_type="Custom")
