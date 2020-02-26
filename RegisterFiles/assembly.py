@@ -6,6 +6,8 @@
  # Go to order screen/menu
  # Start Ordering
 
+import sys
+import serverHandler
 import loginFunction
 import clockInFunction
 import cashDrawerAssign
@@ -16,15 +18,15 @@ import pyautogui
 from random import randrange
 from time import sleep, time
 
-@eel.expose
-def assembly(login, reg, iterations, delay, skipClockin):
+def async_assembly(login, reg, iterations, delay, skipClockin, ipAddr):
     startTime = time()
     _login = login # temp val for user login
     _reg = reg      # temp val for register number
     _iterations = int(iterations)    # temp val for orders
+    _skipClockin = skipClockin
     pyautogui.PAUSE = float(delay)
     
-    if(skipClockin == True):
+    if(_skipClockin == True):
         print(f"Skipping ClockingIn and Drawer Assignment")
         loginFunction.loginFunction(_login)
         pyautogui.click(751, 612) # Click Manager functions
@@ -39,12 +41,17 @@ def assembly(login, reg, iterations, delay, skipClockin):
     for i in range(_iterations):
         rand = randrange(15, 45) #Set the random range to delay next order.
         print(f"Sleeping {rand} seconds before ordering again ZzZzZz...")
-        sleep(rand)
+        #TODO: Send update to Reg 1 on sleep
+        eel.sleep(rand)
         orderHotDog.order(2)
         cashOutFunction.cashOut()
         print(f"Completed order {i} of {_iterations}")
+        #TODO: Send update to Reg 1 on iteration
     print(f"Completed {_iterations} orders in {time() - startTime} seconds")
     pyautogui.alert(text=f"Completed {_iterations} orders in {int(time() - startTime)} seconds", title="COMPLETED TEST", button="OK")
-    
 
+
+@eel.expose
+def assembly(login, reg, iterations, delay, skipClockin, ipAddr):
+    eel.spawn(async_assembly, login, reg, iterations, delay, skipClockin, ipAddr)
 

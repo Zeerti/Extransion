@@ -120,6 +120,7 @@ function start() {
     } else if(isKitchenChecked() === false && validated){
         console.log("Starting Normal Sequence");
         eel.showPopup('alert', 'Preparing to Start Test', `Minimize Extransion window, then click OK to begin`);
+        eel.spawn(eel.assembly, loginCode.value, registerValue, iterationsValue, delay.value, false )
         eel.assembly(loginCode.value, registerValue, iterationsValue, delay.value, false) 
         return null
     }
