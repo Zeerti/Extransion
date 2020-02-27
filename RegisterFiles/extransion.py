@@ -1,4 +1,6 @@
 import pyautogui
+import sys
+import platform
 import time
 import eel
 import errorHandler
@@ -25,31 +27,20 @@ pyautogui.FAILSAFE = True
 # Coords Based on 2560 x 1440 monitor #
 #######################################
 
-#15 - 45 seconds
-#5 second to order
-#smoketest-k91 TO K93
-#smoketest-r01 -- R1
 def main():
-    # add functions here
-    # order(3000) # orders salads X times
-    # orderHotDog.orderHotDogs(300)
-    eel.init('web')
-    eel.start('index.html', mode='edge', size=(1024, 768), position=(0,0))
+    try:
+        print('Starting EEL GUI...')
+        eel.init('web')
+        eel.start('index.html', mode="chrome")
+    except EnvironmentError:
+        print("\n****************\nFailed auto-launching edge. Attemping to load default browswer\n****************\n\nPlease navigate to localhost:8000/index.html manually if it doesn't automatically open")
+        # If Chrome isn't found, fallback to Microsoft Edge on Win10 or greater
+        if sys.platform in ['win32', 'win64'] and int(platform.release()) >= 10:
+            eel.start('index.html', mode ="False")
+        else:
+            raise
 
 if __name__ == '__main__':
-    # pyautogui.alert('Ensure Brink is at the main menu where the salad button is visible!')
     main()
-    #current time -prev time
-   # to show what the total time was when the program finishes
 
-# num = guiInput.seperated()
 
-# for i in num:
-#     if i = 1:
-#         clickNumber1()
-#     if i = 2:
-#         clickNumber2()
-#     if i = 3:
-#         clickNumber3()
-#     if i = 4:
-#         clickNumber4()
