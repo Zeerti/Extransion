@@ -1,67 +1,67 @@
-import socket
-import select
+import select, socket, sys, queue
+PORT = 50000
 
-HEADER_LENGTH = 10
-IP = "127.0.0.1"
-PORT = 1234
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server.setblocking(0)
+server.bind((socket.gethostname(), PORT))
+server.listen(5)
+print(f"Awaiting connections on {socket.gethostname()} from port: {PORT} ")
+inputs = [server]
+outputs = []
+message_queues = {}
 
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-
-server_socket.bind((IP, PORT))
-server_socket.listen()
-
-
-sockets_list = [server_socket]
-clients = {}
-
-def receive_message(client_socket):
-    try:
-        message_header = client_socket.recv(HEADER_LENGTH)
-
-        if not len(message_header):
-            return False
-        
-        message_length = int(message_header.decode('utf-8').strip())
-        return {'header': message_header, 'data': client_socket.recv(message_length)}       
-
-    except:
-        return False
-
-
-while True:
-    read_sockets, _, exception_sockets = select.select(sockets_list, [], sockets_list)
-    for notified_socket in read_sockets:
-        if notified_socket == server_socket:
-            client_socket, client_address = server_socket.accept()
-
-            user = receive_message(client_socket)
-            if user is False:
-                continue
-
-            sockets_list.append(client_socket)
-            clients[client_socket] = user
-
-            print(f"Accepted new connection from {client_address[0]}:{client_address[1]} username:{user['data'].decode('utf-8')}")
-        
+####
+#### When there is the server socket in inputs, it means that a new client has arrived.
+####
+while inputs:
+    readable, writable, exceptional = select.select(inputs, outputs, inputs)
+    # s is a socket object
+    for s in readable:
+        if s is server:
+            # accept incoming connection and store socket and address
+            connection, client_address = s.accept()
+            connection.setblocking(0)
+            # Add new socket(connection) to the inputs array
+            inputs.append(connection)
+            #Create a new queue as a dictionary
+            message_queues[connection] = queue.Queue()
         else:
-            message = receive_message(notified_socket)
+            # receive sent data
+            data = s.recv(1024)
+            if data:
+                # store the new data in the queue dictionary with a key of SOCKET type
+                message_queues[s].put(data)
+                # If the socket is not in OUTPUTS array
+                if s not in outputs:
+                    # Add socket to outputs
+                    outputs.append(s)
+                else:
+                    # if the socket is in the outputs array...
+                    if s in outputs:
+                        outputs.remove(s)
+                    inputs.remove(s)
+                    # close socket connection
+                    s.close()
+                    print(f'Closing connection with {s}')
+                    # delete socket from queue
+                    del message_queues[s]
+    ####                    
+    #### For writable sockets, it gets pending messages (if any) and writes them to the socket. If there is any error in the socket, it removes the socket from the lists.
+    ####
+    for s in writable:
+        try:
+            next_msg = message_queues[s].get_nowait()
+        except queue.Empty:
+            # remove socket from output array as it has no data
+            print(f'Closing connection with {s}')
+            outputs.remove(s)
+        else:
+            # Send message to socket(s)
+            s.send(next_msg)
 
-            if message is False:
-                print(f"Closed connection from {clients[notified_socket]['data'].decode('utf-8')}")
-                sockets_list.remove(notified_socket)
-                del clients[notified_socket]
-                continue
-
-            user = clients[notified_socket]
-            print(f"Received message from {user['data'].decode('utf-8')}: {message['data'].decode('utf-8')}")
-            
-            for client_socket in clients:
-                if client_socket != notified_socket:
-                    client_socket.send(user['header'] + user['data'] + message['header'] + message['data'])
-
-    for notified_socket in exception_sockets:
-        sockets_list.remove(notified_socket)
-        del clients[notified_socket]
-        
-
+    for s in exceptional:
+        inputs.remove(s)
+        if s in outputs:
+            outputs.remove(s)
+        s.close()
+        del message_queues[s]
