@@ -48,7 +48,7 @@ input {
     border-radius: 4px;
     box-shadow: 0 0 30px rgba(0,0,0,0.1);
     box-sizing: border-box;
-    margin: 10px auto 0px;
+    margin: 25px auto 10px;
     overflow: hidden;
 }
 
@@ -63,19 +63,19 @@ input {
 }
 
 .form-panel { 
-    padding: 10px calc(5% + 35px) 0px 20px;
+    padding: 10px 10 10px 20px;
     box-sizing: border-box;
 }
 
 .form-header {
-    margin: 0 0 15px;
+    margin: 0 0 30px;
 }
 
 .form-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 0 15px;
+    margin: 0 0 20px;
 }
 
 .form-group label {
