@@ -31,6 +31,8 @@ def order(numberOfOrders):
             pyautogui.click(x=452, y=192) # order chili cheese dog
         _clicks = _clicks + 1
         # print("Ordered 2 hotdawgs") - for testing purposes
+    
+    pyautogui.click(x=733, y=109) # Order one small drink
 
 
 def orderHotDogs(iterations):
