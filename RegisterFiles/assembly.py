@@ -17,7 +17,7 @@ from random import randrange
 from time import sleep, time
 
 @eel.expose
-def assembly(login, reg, iterations, delay, skipClockin):
+def assembly(login, reg, iterations, delay, skipClockin, minOrderDelay, maxOrderDelay):
     startTime = time()
     _login = login # temp val for user login
     _reg = reg      # temp val for register number
@@ -37,7 +37,7 @@ def assembly(login, reg, iterations, delay, skipClockin):
     
     # Order hot dogs and cash out orders until iterations complete
     for i in range(_iterations):
-        rand = randrange(30, 60) #Set the random range to delay next order.
+        rand = randrange(minOrderDelay, maxOrderDelay) #Set the random range to delay next order.
         print(f"Sleeping {rand} seconds before ordering again ZzZzZz...")
         sleep(rand)
         orderHotDog.order(4)

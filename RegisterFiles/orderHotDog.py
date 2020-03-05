@@ -37,7 +37,8 @@ def orderHotDogs(iterations):
     try:
         for i in range(iterations):
             order(2) # Order X random things that are hotdogs
-            pyautogui.click(x=663, y=647) #Exact Cash button
+            pyautogui.click(x=733, y=109) # Order one small drink
+            pyautogui.click(x=663, y=647) # Exact Cash button
             pyautogui.click(x=764, y=581, clicks=2, interval=.25) # Okay button / confirm change
     except TypeError:
         pyautogui.alert(text="General Error occurred while ordering", title="Unknown Error")
