@@ -23,7 +23,7 @@ run the following command to download and install eel
 After installing all pre-reqs do the following:
 1. Launch command prompt as an admin
 2. navigate to main.py file location
-3. type in `python main.py`
+3. type in `python extransion.py`
 
 ## Compliling Extransion into an EXE
 1. Make sure you have `PyInstall` installed
