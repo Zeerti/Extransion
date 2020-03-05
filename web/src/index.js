@@ -28,7 +28,7 @@ function onInputFocus(event) {
   keyboardElement = document.getElementById('keyboard');
   formElement = document.getElementById("primary-form");
 
-  formElement.className = "form displaced";
+  // formElement.className = "form displaced";
   keyboardElement.className = 'keyboard-wrapper';
   
   selectedInput = `#${event.target.id}`;
