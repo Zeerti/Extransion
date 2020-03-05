@@ -24,12 +24,16 @@ function validate_data() {
     loginCode = document.getElementById('input2');
     iterations = document.getElementById('input3');
     delay = document.getElementById('input4');
+    minimumOrderDelay = document.getElementById('input5');
+    maximumOrderDelay = document.getElementById('input6');
     // default input2 input3
     
     registerValue = Number(registerNumber.value);
     loginValue = Number(loginCode.value);
     iterationsValue = Number(iterations.value);
     delayValue = Number(delay.value);
+    minimumOrderDelay = Number(minimumOrderDelay.value);
+    maximumOrderDelay = Number(maximumOrderDelay.value);
 
 
     // flag to return on if validated or not
@@ -82,7 +86,26 @@ function validate_data() {
     else if(delayValue > 5) {
         eel.showPopup('alert', 'Invalid Input', `===ERROR===:\n\nDelay value was set above the maximum threshold of 5\n\nPlease input a valid delay value and try again`);
         return validated;
-    } else {
+    }
+    else if(maximumOrderDelay < minimumOrderDelay) {
+        eel.showPopup('alert', 'Invalid Input', `===ERROR===:\n\nMaximum Order Delay was set to a lower number than the Minimum Order Delay\n\nPlease input a number greater than the Minimum Order Delay and try again` )
+    }
+    else if(minimumOrderDelay > maximumOrderDelay) {
+        eel.showPopup('alert', 'Invalid Input', `===ERROR===:\n\nMinimum Order Delay was set to a higher number than the Maximum Order Delay\n\nPlease input a number less than the Maximum Order Delay and try again` )
+    }
+    else if(maximumOrderDelay > 10000) {
+        eel.showPopup('alert', 'Invalid Input', `===ERROR===:\n\nMaximum Order Delay larger than 10000 seconds\n\nPlease input a number lower than 10001 and try again` );
+    }
+    else if(maximumOrderDelay < 2) {
+        eel.showPopup('alert', 'Invalid Input', `===ERROR===:\n\nMaximum Order Delay lower than 2 seconds\n\nPlease input a number higher than 2 and try again` );
+    }
+    else if(minimumOrderDelay > 9999) {
+        eel.showPopup('alert', 'Invalid Input', `===ERROR===:\n\nMinimum Order Delay larger than 9999 seconds\n\nPlease input a number lower than 10000 and try again` );
+    }
+    else if(minimumOrderDelay < 1) {
+        eel.showPopup('alert', 'Invalid Input', `===ERROR===:\n\nMinimum Order Delay lower than 1 second\n\nPlease input a number greater than 1 and try again` );
+    }
+    else {
         validated = true;
         return validated;
     }
@@ -114,13 +137,13 @@ function start() {
         if(validated){
             console.log('Starting "Skip Clockin/CD Assign" Sequence');
             eel.showPopup('alert', 'Preparing to Start Test', `Minimize Extransion window, then click OK to begin`);
-            eel.assembly(loginCode.value, registerValue, iterationsValue, delay.value, true);
+            eel.assembly(loginCode.value, registerValue, iterationsValue, delay.value, true, minimumOrderDelay, maximumOrderDelay);
             return null;
         }
     } else if(isKitchenChecked() === false && validated){
         console.log("Starting Normal Sequence");
         eel.showPopup('alert', 'Preparing to Start Test', `Minimize Extransion window, then click OK to begin`);
-        eel.assembly(loginCode.value, registerValue, iterationsValue, delay.value, false) 
+        eel.assembly(loginCode.value, registerValue, iterationsValue, delay.value, false, minimumOrderDelay, maximumOrderDelay);
         return null
     }
 }
