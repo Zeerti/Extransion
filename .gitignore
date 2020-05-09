@@ -132,3 +132,6 @@ dmypy.json
 
 .vscode/settings.json
 settings.json
+*.bak
+*.dat
+*.dir

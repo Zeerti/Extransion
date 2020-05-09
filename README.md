@@ -5,11 +5,12 @@ Automating BrinkPOS for testing purposes
 https://github.com/Zeerti/Extransion/releases
 
 ## Requirements
+1. Windows 10 (Maybe 7?)
 1. Python 3.7+
 2. PyAutoGui
 3. Eel
 
-## Installing
+## Installing Dependencies
 Download and install this version of Python
 - https://www.python.org/downloads/release/python-376/
 
